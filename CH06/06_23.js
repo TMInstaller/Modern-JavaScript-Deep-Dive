@@ -15,3 +15,12 @@ console.log(typeof foo); //object
 
 foo = Symbol();
 console.log(typeof foo); // symbol
+
+foo = {};
+console.log(typeof foo); // object
+
+foo = [];
+console.log(typeof foo); // object
+
+foo = function () {};
+console.log(typeof foo); // function
