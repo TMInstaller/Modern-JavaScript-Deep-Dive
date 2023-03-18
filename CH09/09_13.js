@@ -19,3 +19,5 @@ isFalsy("");
 // 모두 true를 반환한다.
 isTruthy(true);
 isTruthy("0"); // 빈 문자열이 아닌 문자열은 Truthy 값이다.
+isTruthy({});
+isTruthy([]);
