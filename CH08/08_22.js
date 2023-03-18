@@ -12,3 +12,5 @@ for (var i = 0; i < string.length; i++) {
 }
 
 console.log(index); // 2
+// 참고로 String.prototype.indexOf 메서드를 사용해도 같은 동작을 한다.
+console.log(string.indexOf(search));
