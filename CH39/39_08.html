@@ -10,14 +10,16 @@
       <li>HTML</li>
     </ul>
     <script>
-      // DOM 전체에서 태그 이름이 li인 요소 노드를 모두 탐색하여 반환한다.
-      const $lisFromDocument = document.getElementsByTagName("li");
-      console.log($lisFromDocument); // HTMLCollection(4) [li, li, li, li]
+      // 태그 이름이 li인 요소 노드를 모두 탐색하여 반환한다.
+      // 탐색된 요소 노드들은 HTMLCollection 객체에 담겨 반환된다.
+      // HTMLCollection 객체는 유사 배열 객체이면서 이터러블이다.
+      const $elems = document.getElementsByTagName("li");
 
-      // ul#fruits 요소의 자손 노드 중에서 태그 이름이 li인 요소 노드를 모두 탐색하여 반환한다.
-      const $fruits = document.getElementById("fruits");
-      const $lisFromFruits = $fruits.getElementsByTagName("li");
-      console.log($lisFromFruits); // HTMLCollection(3) [li, li, li]
+      // 취득한 모든 요소 노드의 style.color 프로퍼티 값을 변경한다.
+      // HTMLCollection 객체를 배열로 변환하여 순회하며 color 프로퍼티 값을 변경한다.
+      [...$elems].forEach((elem) => {
+        elem.style.color = "red";
+      });
     </script>
   </body>
 </html>
