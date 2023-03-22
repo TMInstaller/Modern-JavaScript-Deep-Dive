@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="fruits">
+      <li>Apple</li>
+      <li>Banana</li>
+    </ul>
+  </body>
+  <script>
+    const $fruits = document.getElementById("fruits");
+
+    // childNodes 프로퍼티는 NodeList 객체(live)를 반환한다.
+    const { childNodes } = $fruits;
+    console.log(childNodes instanceof NodeList); // true
+
+    // $fruits 요소의 자식 노드는 공백 텍스트 노드(39.3.1절 "공백 텍스트 노드" 참고)를
+    // 포함해 모두 5개다.
+    console.log(childNodes); // Nodelist(5) [text, li, text, li, text]
+
+    for (let i = 0; i < childNodes.length; i++) {
+      // removeChild 메서드는 $fruits 요소의 자식 노드를 DOM에서 삭제한다.
+    }
+  </script>
+</html>
