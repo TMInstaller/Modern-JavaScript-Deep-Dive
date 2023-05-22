@@ -8,3 +8,6 @@ function foo() {
 function bar() {
   console.log(x);
 }
+
+foo(); // ?
+bar(); // ?
