@@ -16,3 +16,4 @@ true && false; // -> false
 // 타입 연산자
 typeof "Hi"; // -> string
 typeof 3; // -> number
+typeof true // -> boolean
